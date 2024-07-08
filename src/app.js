@@ -14,17 +14,6 @@ conexao.once("open", () => {
 const app = express();
 app.use(express.json());
 
-const livros = [
-    {
-        id: 1,
-        titulo: "O Senhor dos Anéis"
-    },
-    {
-        id: 2,
-        titulo: "O Hobbit"
-    }
-]
-
 function buscaLivro(id) {
     return livros.findIndex(livro => {
         return livro.id === Number(id);
