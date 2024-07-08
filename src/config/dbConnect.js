@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 async function conectaNaDatabase() {
-    mongoose.connect("mongodb+srv://marcos:<password>@learning-environment.dqqvcyi.mongodb.net/livraria?retryWrites=true&w=majority&appName=learning-environment");
+    mongoose.connect(process.env.DB_CONNECTION_STRING);
     return mongoose.connection;
 };
 
